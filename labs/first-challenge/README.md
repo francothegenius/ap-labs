@@ -12,21 +12,21 @@ This is the first challenge in your Advanced Programming Class.
 Build Requirements
 ------------------
 ```
-# Build Requirements here
++ [Python 3](https://www.python.org/downloads/)
 ```
 
 
 How to build
 ------------
 ```
-# instructions here
+No build needed
 ```
 
 
 How to Run
 ----------
 ```
-# instructions here
+On terminal run $python3 getLength.py
 ```
 
 
