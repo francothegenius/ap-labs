@@ -11,7 +11,7 @@ This is the first challenge in your Advanced Programming Class.
 
 Build Requirements
 ------------------
-+[Python 3](https://www.python.org/downloads/)
++ [Python 3](https://www.python.org/downloads/)
 
 
 
