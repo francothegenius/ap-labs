@@ -2,7 +2,8 @@
 #include <stdlib.h>
 
 
-/* print Fahrenheit-Celsius table */
+/* Francisco Mariano Amézquita Ramos A01634495 */
+
 
 int main(int argc, char **argv)
 {
