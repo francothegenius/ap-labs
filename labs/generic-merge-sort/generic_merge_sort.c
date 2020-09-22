@@ -3,68 +3,72 @@
 #include <string.h>
 #define ARRAYSIZE 100
 
-void mergeSort(char *arrayList[], int init, int final, int isNumber);
-void merge(char *arrayList[], int initial, int middle, int final, int (*comp)(void *, void *));
+void mergeSort(char *array[], int init, int final, int isNumber);
+void merge(char *array[], int initial, int middle, int final, int (*comp)(void *, void *));
 int numCmp(char *, char *);
-void printArray(char *arrayList[], int arraySize);
+void printArray(char *array[], int arraySize);
 
 
-void mergeSort(char *arrayList[], int init, int final, int isNumber){
+void mergeSort(char *array[], int init, int final, int isNumber){
     if (init < final){
         int middle = init + (final - init) / 2;
-        mergeSort(arrayList, init, middle, isNumber);
-        mergeSort(arrayList, middle + 1, final, isNumber);
-        merge(arrayList, init, middle, final, (int (*)(void *, void *))(isNumber ? numCmp : strcmp));
+        mergeSort(array, init, middle, isNumber);
+        mergeSort(array, middle + 1, final, isNumber);
+        merge(array, init, middle, final, (int (*)(void *, void *))(isNumber ? numCmp : strcmp));
     }
 }
 
-void merge(char *arrayList[], int initial, int middle, int final, int (*comp)(void *, void *)){
+void merge(char *array[], int initial, int middle, int final, int (*comp)(void *, void *)){
     int i, j, k;
     int leftSize = middle - initial + 1;
     int rightSize = final - middle;
     char *L[leftSize];
     char *R[rightSize];
-
-    for (i = 0; i < leftSize; i++)
-        L[i] = arrayList[initial + i];
-    for (j = 0; j < rightSize; j++)
-        R[j] = arrayList[middle + 1 + j];
+    for (i = 0; i < leftSize; i++){
+        L[i] = array[initial + i];
+    }
+    for (j = 0; j < rightSize; j++){
+        R[j] = array[middle + 1 + j];
+    }
 
     i = 0;
     j = 0;
     k = initial;
+
     while (i < leftSize && j < rightSize){
         if ((*comp)(L[i], R[j]) <= 0){
-            arrayList[k] = L[i];
+            array[k] = L[i];
             i++;
         }
         else{
-            arrayList[k] = R[j];
+            array[k] = R[j];
             j++;
         }
         k++;
     }
+
     while (i < leftSize){
-        arrayList[k] = L[i];
+        array[k] = L[i];
         i++;
         k++;
     }
+
     while (j < rightSize){
-        arrayList[k] = R[j];
+        array[k] = R[j];
         j++;
         k++;
     }
 }
 
-void printArray(char *arrayList[], int arraySize){
+void printArray(char *array[], int arraySize){
     for (int i = 0; i < arraySize; i++)
     {
         //not adding comma
         if (i == arraySize - 1){
-            printf("%s \n", arrayList[i]);
+            printf("%s \n", array[i]);
         }
         else{
-            printf("%s, ", arrayList[i]);
+            printf("%s, ", array[i]);
         }
     }
     return;
@@ -104,7 +108,7 @@ int main(int argc, char *argv[]){
         return 0;
     }
 
-    char **arrayList = malloc(sizeof(char *) * ARRAYSIZE);
+    char **array = malloc(sizeof(char *) * ARRAYSIZE);
     
     FILE *fp = fopen(file, "r");
     if (!fp){
@@ -123,9 +127,9 @@ int main(int argc, char *argv[]){
     while (line_size >= 0){
 
         //saving in array the info from file to be sorted
-        arrayList[numberOfLine] = malloc(sizeof(char) * line_buf_size);
-        sprintf(arrayList[numberOfLine], "%s", line_buf);
-        arrayList[numberOfLine][strlen(line_buf) - 1] = 0;
+        array[numberOfLine] = malloc(sizeof(char) * line_buf_size);
+        sprintf(array[numberOfLine], "%s", line_buf);
+        array[numberOfLine][strlen(line_buf) - 1] = 0;
         numberOfLine++;
         //new line
         line_size = getline(&line_buf, &line_buf_size, fp);
@@ -134,12 +138,11 @@ int main(int argc, char *argv[]){
     fclose(fp);
 
     printf("Before MergeSort: \n");
-    printArray(arrayList, ARRAYSIZE);
-
-    mergeSort(arrayList, 0, ARRAYSIZE - 1, sortNumbers);
+    printArray(array, ARRAYSIZE);
+    mergeSort(array, 0, ARRAYSIZE - 1, sortNumbers);
     printf("--------------------------------------------------------------------------\n");
     printf("After MergeSort: \n");
-    printArray(arrayList, ARRAYSIZE);
+    printArray(array, ARRAYSIZE);
 
     return 0;
 }
