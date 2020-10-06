@@ -1,3 +1,5 @@
+#define _XOPEN_SOURCE 500
+#define BUF_LEN (10 * (sizeof(struct inotify_event) + NAME_MAX + 1))
 #include <stdio.h>
 #include "logger.h"
 #include <stdlib.h>
@@ -5,11 +7,8 @@
 #include <stdint.h>
 #include <sys/inotify.h>
 #include <limits.h>
-
-/*Resource: https://linux.die.net/man/3/nftw */
 #include <ftw.h>
-#define _XOPEN_SOURCE 500
-#define BUF_LEN (10 * (sizeof(struct inotify_event) + NAME_MAX + 1))
+/*Resource: https://linux.die.net/man/3/nftw */
 
 int inotifyFd;
 int wd;
@@ -41,26 +40,27 @@ int main(int argc, char** argv){
     struct inotify_event *event;
 
     if (argc < 2){
-        errorf("Error! Invalid Input");
+        errorf("Error! Invalid Input\n");
         exit(EXIT_FAILURE);
     }
 
     /*Resource: https://man7.org/linux/man-pages/man7/inotify.7.html*/
     inotifyFd = inotify_init();                 
-    if (inotifyFd == -1)
+    if (inotifyFd == -1){
         errorf("inotify_init");
+    }
 
-   if (argc > 2 && strchr(argv[2], 'd') != NULL){
+    if (argc > 2 && strchr(argv[2], 'd') != NULL){
         flags |= FTW_DEPTH;
-   }
-   if (argc > 2 && strchr(argv[2], 'p') != NULL){
+   	}
+    if (argc > 2 && strchr(argv[2], 'p') != NULL){
         flags |= FTW_PHYS;
-   }
+   	}
 
-   if (nftw((argc < 2) ? "." : argv[1], display_info, 20, flags) == -1) {
+   	if (nftw((argc < 2) ? "." : argv[1], display_info, 20, flags) == -1) {
         errorf("nftw");
         exit(EXIT_FAILURE);
-    }
+   	}
 
     for (;;) { 
         numRead = read(inotifyFd, buf, BUF_LEN);
