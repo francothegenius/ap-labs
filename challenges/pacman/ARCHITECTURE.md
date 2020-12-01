@@ -19,3 +19,8 @@ Technical Requirements
 - Display obtained pacman's scores.
 - Pacman loses when an enemy touches it.
 - Pacman wins the game when it has taken all coins in the map.
+
+
+Architecture
+-------------
+
