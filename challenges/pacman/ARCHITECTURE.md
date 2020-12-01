@@ -24,7 +24,10 @@ Technical Requirements
 Architecture
 -------------
 
-Multithreaded Pacman created with graphical interface and implemented in C, using the library SDL (SDL2 image and SDL2 ttf) and library for GUI and use of threads, respectively. 
+Multithreaded Pacman created with graphical interface and implemented in C, using the libraries SDL (SDL2 image and SDL2 ttf) and OpenMP for GUI and user input and use of threads, respectively. 
+
+Usage
+-------------
 
 
 Structures
