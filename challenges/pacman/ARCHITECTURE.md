@@ -41,9 +41,19 @@ The different structures (structs) used on the Multithreaded Pacman Videogame ar
 ### Cell
 | Attibutes                  |   DataType   | Description                                                                      |
 |----------------------------|--------------|----------------------------------------------------------------------------------|
-|     isPath                 |     bool     | Identifies the player                                                            |
-|     resType                |     int      | The current position of the car in the x axis                                    |
-|     hasPoints              |     bool     | The current position of the car in the x axis                                    |
+|     isPath                 |     bool     | xxxxxxxxxxxxxxxxxxxxxx                                                           |
+|     resType                |     int      | xxxxxxxxxxxxxxxxxxxxxx                                                           |
+|     hasPoints              |     bool     |xxxxxxxxxxxxxxxxxxxxxx                                                            |
+
+
+### NPC
+| Attibutes                  |   DataType   | Description                                                                      |
+|----------------------------|--------------|----------------------------------------------------------------------------------|
+|     isAlive                |     bool     | xxxxxxxxxxxxxxxxxxxxxx                                                           |
+|     isEdible               |     bool     | xxxxxxxxxxxxxxxxxxxxxx                                                           |
+|     direction              |     int      |xxxxxxxxxxxxxxxxxxxxxx                                                            |
+|         x                  |     double   |xxxxxxxxxxxxxxxxxxxxxx                                                            |
+|         y                  |     double   |xxxxxxxxxxxxxxxxxxxxxx                                                            |
 
 Functions
 -------------
