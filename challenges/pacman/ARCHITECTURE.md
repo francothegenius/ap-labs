@@ -23,9 +23,9 @@ Technical Requirements
 
 Previous Requirements
 =========================
-You are running macOS Catalina
-you have installed Xcode command line tools
-You have installed brew
+- You are running macOS Catalina
+- You have installed Xcode command line tools
+- You have installed brew
 
 
 Architecture
