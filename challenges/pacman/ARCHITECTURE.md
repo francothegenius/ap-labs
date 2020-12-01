@@ -38,6 +38,15 @@ Structures
 
 The different structures (structs) used on the Multithreaded Pacman Videogame are as follows:
 
+### Player (with globlal variables)
+
+| Attibutes                  |   DataType   | Description                                                                      |
+|----------------------------|--------------|----------------------------------------------------------------------------------|
+|     playerX                |     double   | xxxxxxxxxxxxxxxxxxxxxx                                                           |
+|     playerY                |     double   | xxxxxxxxxxxxxxxxxxxxxx                                                           |
+|     playerDirection        |     int      |xxxxxxxxxxxxxxxxxxxxxx                                                            |
+
+
 ### Cell
 | Attibutes                  |   DataType   | Description                                                                      |
 |----------------------------|--------------|----------------------------------------------------------------------------------|
