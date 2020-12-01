@@ -68,40 +68,40 @@ Functions
 -------------
 `setDirectionPlayerRender(): void` Changes player´s face direction according to movement (Up, Down, Left, Right).
 
-`keyboardHandler(const char *): void`
+`keyboardHandler(const char *): void` Manages keyboard input (Player´s trigger).
 
-`initPlayerResources(): void`
+`initPlayerResources(): void` Initialize player´s attributes.
 
-`initMap(): void`
+`initMap(): void` Initialize map´s attributes.
 
-`initNPCS(): void`
+`initNPCS(): void` Initialize NPC´s attributes.
 
-`getMod(double,double): double`
+`getMod(double,double): double` Get module of a set of numbers (including negative numbers). Function used for map movement regarding the player. (Entering one side and exiting the opposite side.)
 
-`msleep(unsigned int tms): int`
+`msleep(unsigned int tms): int` Function for time management regarding updates and movements.
 
-`collectCoin(int): void`
+`collectCoin(int): void` Function when the player collides with a coin, adds on counter score, decreases coins left.
 
-`collectPowerUp(int): void`
+`collectPowerUp(int): void` Function when the player collides with a power-up, changes NPC´s to eatable.
 
-`movePlayer(): void`
+`movePlayer(): void` Gives the player constant movement according to the input.
 
-`checkMapForPoints(): void`
+`checkMapForPoints(): void` Checks the map with respect the player in terms of position.
 
-`getIndexByXY(int, int): int`
+`getIndexByXY(int, int): int`Finds coordinate within the map.
 
-`checkCollision(): void`
+`checkCollision(): void` Check if the NPC is colliding with a wall.
 
-`NPCController(int): void`
+`NPCController(int): void` Function that runs on each thread.
 
-`moveNPC(int): void`
+`moveNPC(int): void` Gives the NPC movement.
 
-`randomInRange(int,int): int`
+`randomInRange(int,int): int` Gives random number in certain range used for the NPC´s random movement.
 
-`changeNPCDirection(int,int): void`
+`changeNPCDirection(int,int): void` Change´s NPC´s direction.
 
-`isInCollision(int): bool`
+`isInCollision(int): bool`Checks if the NCP´s is in collision within the map.
 
-`powerUpDriver(): void`
+`powerUpDriver(): void` Timer used for down timing once power up is activated.
 
 `killPacman(): void`
