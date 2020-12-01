@@ -57,5 +57,5 @@ The different structures (structs) used on the Multithreaded Pacman Videogame ar
 
 Functions
 -------------
-`setDirectionPlayerRender(): void`
+`setDirectionPlayerRender(): void` hi
 
