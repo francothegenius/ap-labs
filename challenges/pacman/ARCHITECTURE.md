@@ -28,6 +28,7 @@ Multithreaded Pacman created with graphical interface and implemented in C, usin
 
 Usage
 -------------
+For the usage of the Multithreaded Pacman Videogame is the classic W,A,S,D keys from the keyboard that will control Up, Left, Down and Right, respectevely.
 
 <img src="controls.jpg" width="40%">.
 
