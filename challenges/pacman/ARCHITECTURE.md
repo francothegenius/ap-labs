@@ -69,5 +69,30 @@ Functions
 
 `getMod(double,double): double`
 
+`msleep(unsigned int tms): int`
 
+`collectCoin(int): void`
 
+`collectPowerUp(int): void`
+
+`movePlayer(): void`
+
+`checkMapForPoints(): void`
+
+`getIndexByXY(int, int): int`
+
+`checkCollision(): void`
+
+`NPCController(int): void`
+
+`moveNPC(int): void`
+
+`randomInRange(int,int): int`
+
+`changeNPCDirection(int,int): void`
+
+`isInCollision(int): bool`
+
+`powerUpDriver(): void`
+
+`killPacman(): void`
