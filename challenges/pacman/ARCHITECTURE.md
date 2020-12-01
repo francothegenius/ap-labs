@@ -21,6 +21,13 @@ Technical Requirements
 - Pacman wins the game when it has taken all coins in the map.
 
 
+Previous Requirements
+=========================
+You are running macOS Catalina
+you have installed Xcode command line tools
+You have installed brew
+
+
 Architecture
 -------------
 
