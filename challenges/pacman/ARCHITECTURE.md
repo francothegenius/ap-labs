@@ -25,6 +25,8 @@ Architecture
 -------------
 
 Multithreaded Pacman created with graphical interface and implemented in C, using the library SDL (SDL2 image and SDL2 ttf) and library for GUI and use of threads, respectively. 
+
+
 Structures
 -------------
 
