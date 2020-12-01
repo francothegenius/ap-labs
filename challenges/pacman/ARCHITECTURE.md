@@ -66,7 +66,7 @@ The different structures (structs) used on the Multithreaded Pacman Videogame ar
 
 Functions
 -------------
-`setDirectionPlayerRender(): void` hi
+`setDirectionPlayerRender(): void` Changes player´s face direction according to movement (Up, Down, Left, Right).
 
 `keyboardHandler(const char *): void`
 
