@@ -30,5 +30,5 @@ Structures
 
 Functions
 -------------
-### void play(ranks chan Car)
+`RUNNING: int`
 
