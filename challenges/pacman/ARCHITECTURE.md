@@ -58,10 +58,16 @@ The different structures (structs) used on the Multithreaded Pacman Videogame ar
 Functions
 -------------
 `setDirectionPlayerRender(): void` hi
+
 `keyboardHandler(const char *): void`
+
 `initPlayerResources(): void`
+
 `initMap(): void`
+
 `initNPCS(): void`
+
 `getMod(double,double): double`
+
 
 
