@@ -26,6 +26,11 @@ Architecture
 
 Multithreaded Pacman created with graphical interface and implemented in C, using the libraries SDL (SDL2 image and SDL2 ttf) and OpenMP for GUI and user input and use of threads, respectively. 
 
+Architecture diagram:
+
+![pacman-diagram](pacman-diagram.png)
+
+
 Usage
 -------------
 For the usage of the Multithreaded Pacman Videogame is the classic W,A,S,D keys from the keyboard that will control Up, Left, Down and Right, respectevely.
