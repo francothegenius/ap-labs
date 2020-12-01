@@ -42,25 +42,25 @@ The different structures (structs) used on the Multithreaded Pacman Videogame ar
 
 | Attibutes                  |   DataType   | Description                                                                      |
 |----------------------------|--------------|----------------------------------------------------------------------------------|
-|     playerX                |     double   | xxxxxxxxxxxxxxxxxxxxxx                                                           |
-|     playerY                |     double   | xxxxxxxxxxxxxxxxxxxxxx                                                           |
-|     playerDirection        |     int      |xxxxxxxxxxxxxxxxxxxxxx                                                            |
+|     playerX                |     double   | Player´s coordinate on X from the map.                                           |
+|     playerY                |     double   | Player´s coordinate on Y from the map.                                           |
+|     playerDirection        |     int      | Saves the direction of the NPC(Up, Down, Left, Right)                            |
 
 
 ### Cell
 | Attibutes                  |   DataType   | Description                                                                      |
 |----------------------------|--------------|----------------------------------------------------------------------------------|
-|     isPath                 |     bool     | xxxxxxxxxxxxxxxxxxxxxx                                                           |
-|     resType                |     int      | xxxxxxxxxxxxxxxxxxxxxx                                                           |
-|     hasPoints              |     bool     |xxxxxxxxxxxxxxxxxxxxxx                                                            |
+|     isPath                 |     bool     | Gives if certain cell of the map is a path or not.                               |
+|     resType                |     int      | Saves the different type of cells available (Barrier, Coin, PowerUp, Path)       |
+|     hasPoints              |     bool     | Gives if certain cell of the map is has a point or not(walkable by the player).  |
 
 
 ### NPC
 | Attibutes                  |   DataType   | Description                                                                      |
 |----------------------------|--------------|----------------------------------------------------------------------------------|
-|     isAlive                |     bool     | xxxxxxxxxxxxxxxxxxxxxx                                                           |
-|     isEdible               |     bool     | xxxxxxxxxxxxxxxxxxxxxx                                                           |
-|     direction              |     int      |xxxxxxxxxxxxxxxxxxxxxx                                                            |
+|     isAlive                |     bool     | Checks if the NPC is alive                                                       |
+|     isEdible               |     bool     | Checks if the NPC can be eated by the player                                     |
+|     direction              |     int      | Saves the direction of the NPC(Up, Down, Left, Right)                            |
 |         x                  |     double   |xxxxxxxxxxxxxxxxxxxxxx                                                            |
 |         y                  |     double   |xxxxxxxxxxxxxxxxxxxxxx                                                            |
 
@@ -105,3 +105,8 @@ Functions
 `powerUpDriver(): void` Timer used for down timing once power up is activated.
 
 `killPacman(): void` Kills the player. Respawn at center once killed.
+
+`buildMap(): void` Constructs the map.
+
+`countCoins(): int`Counts the coins on the map.
+
