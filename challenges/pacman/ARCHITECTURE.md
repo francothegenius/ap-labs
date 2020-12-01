@@ -29,6 +29,8 @@ Multithreaded Pacman created with graphical interface and implemented in C, usin
 Usage
 -------------
 
+![Controls](controls.jpg)
+
 
 Structures
 -------------
