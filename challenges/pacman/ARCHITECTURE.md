@@ -26,7 +26,7 @@ Architecture
 
 Multithreaded Pacman created with graphical interface and implemented in C, using the libraries SDL (SDL2 image and SDL2 ttf) and OpenMP for GUI and user input and use of threads, respectively. 
 
-Architecture diagram:
+Task Flow diagram:
 
 ![pacman-diagram](pacman-diagram.png)
 
