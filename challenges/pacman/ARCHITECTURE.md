@@ -36,6 +36,15 @@ For the usage of the Multithreaded Pacman Videogame is the classic W,A,S,D keys 
 Structures
 -------------
 
+The different structures (structs) used on the Multithreaded Pacman Videogame are as follows:
+
+### Cell
+| Attibutes                  |   DataType   | Description                                                                      |
+|----------------------------|--------------|----------------------------------------------------------------------------------|
+|     isPath                 |     bool     | Identifies the player                                                            |
+|     resType                |     int      | The current position of the car in the x axis                                    |
+|     hasPoints              |     bool     | The current position of the car in the x axis                                    |
+
 Functions
 -------------
 `RUNNING: int`
