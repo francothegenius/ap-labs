@@ -104,4 +104,4 @@ Functions
 
 `powerUpDriver(): void` Timer used for down timing once power up is activated.
 
-`killPacman(): void`
+`killPacman(): void` Kills the player. Respawn at center once killed.
