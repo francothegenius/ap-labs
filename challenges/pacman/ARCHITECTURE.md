@@ -29,7 +29,7 @@ Multithreaded Pacman created with graphical interface and implemented in C, usin
 Usage
 -------------
 
-![Controls](controls.jpg =100x20)
+![Controls](controls.jpg | width=100)
 
 
 Structures
