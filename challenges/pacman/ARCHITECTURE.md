@@ -24,3 +24,9 @@ Technical Requirements
 Architecture
 -------------
 
+Structures
+-------------
+
+Functions
+-------------
+
