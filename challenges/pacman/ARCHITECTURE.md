@@ -23,10 +23,12 @@ Technical Requirements
 
 Architecture
 -------------
+Multithreaded Pacman created with graphical interface and implemented in C.
 
 Structures
 -------------
 
 Functions
 -------------
+### void play(ranks chan Car)
 
